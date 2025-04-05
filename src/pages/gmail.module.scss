@@ -1,8 +1,8 @@
-.messages {
+.gmail {
   display: flex;
   flex-direction: column;
   flex: 1;
-  width: 41.5rem;
+  width: 75rem;
   border-radius: 2rem;
   background: var(--surface-0);
   color: var(--on-surface);
@@ -22,14 +22,21 @@
   }
   & > section {
     display: flex;
-    flex-direction: column;
     justify-content: end;
+    width: 100%;
     flex: 1;
-    width: 100%;
-  }
-  & > footer {
-    width: 100%;
-    padding: 2rem 3rem 3rem;
-    border-top: 1px solid var(--outline-variant-2);
+    & > div {
+      display: flex;
+      flex-direction: column;
+      width: 28.75rem;
+      height: 100%;
+      background: var(--surface-1);
+      border-right: 1px solid var(--outline-variant);
+    }
+    & > article {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
   }
 }

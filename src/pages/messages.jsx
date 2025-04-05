@@ -9,7 +9,7 @@ export const Messages = () => {
       translateX: -96,
       scale: '0',
       // opacity: 0,
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power1.out',
     })
   })
