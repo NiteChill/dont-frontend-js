@@ -6,6 +6,7 @@ import { Gmail } from './pages/gmail';
 import { X } from './pages/x';
 import { Tinder } from './pages/Tinder';
 import { Layout } from './components/layout';
+import { ArcadeLanding } from './pages/arcadeLanding';
 import { GameKeys } from './constants/games';
 
 export const router = createBrowserRouter([
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Landing />,
+      },
+      {
+        path: '/start',
+        element: <ArcadeLanding />,
       },
       {
         path: '/',
