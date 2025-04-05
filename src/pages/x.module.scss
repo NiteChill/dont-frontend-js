@@ -1,0 +1,46 @@
+.x {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  width: 41.5rem;
+  border-radius: 2rem;
+  background: var(--surface-0);
+  color: var(--on-surface);
+  overflow: hidden;
+  transform-origin: bottom center;
+  & .wrapper {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+      background-color: var(--surface-1);
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 8px;
+      background-color: var(--surface-4);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    & .section {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+  }
+
+  & > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background: var(--surface-1);
+    & > h1 {
+      font-size: 1.25rem;
+    }
+  }
+}

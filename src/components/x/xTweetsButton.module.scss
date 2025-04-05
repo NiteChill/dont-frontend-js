@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 8px 18px 8px 18px;
+  gap: 8px;
+  font-size: 16px;
+  border-radius: 16px;
+  &:hover {
+    cursor: pointer;
+    background: var(--surface-1);
+  }
+  &:active {
+    cursor: pointer;
+    background: var(--surface-2);
+  }
+  & .buttonWithChildren{
+    padding: 8px 24px 8px 18px;
+  }
+}

@@ -1,4 +1,4 @@
-import { Navbutton } from './navButton';
+import { Navbutton } from './navbutton';
 import styles from './navbar.module.scss';
 import msgImg from '../assets/images/messages.png';
 import gmailImg from '../assets/images/gmail.png';
