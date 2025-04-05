@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import styles from './result.module.scss';
+import { GameKeys } from '../constants/games';
 
 export const Result = ({ result, onShowAdvice, currentAdviceIdx }) => {
     if (currentAdviceIdx === null) {
         return (
             <div className={styles.wrapper}>
                 <h4>Il semble que vous ayez reçu un mail</h4>
-                <Link to="/gmail" className={styles.adviceBtn}>Voir les mails</Link>
+                <Link to={`/${GameKeys.Mail}`} className={styles.adviceBtn}>Voir les mails</Link>
             </div>
         )
     }

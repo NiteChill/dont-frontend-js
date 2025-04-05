@@ -6,6 +6,7 @@ import { Gmail } from './pages/gmail';
 import { X } from './pages/X';
 import { Tinder } from './pages/Tinder';
 import { Layout } from './components/layout';
+import { GameKeys } from './constants/games';
 
 export const router = createBrowserRouter([
   {
@@ -21,19 +22,19 @@ export const router = createBrowserRouter([
         element: <Layout />,
         children: [
           {
-            path: '/messages',
+            path: `/${GameKeys.Chat}`,
             element: <Messages />,
           },
           {
-            path: '/gmail',
+            path: `/${GameKeys.Mail}`,
             element: <Gmail />,
           },
           {
-            path: '/x',
+            path: `/${GameKeys.SocialMedia}`,
             element: <X />,
           },
           {
-            path: '/tinder',
+            path: `/${GameKeys.Hookup}`,
             element: <Tinder />,
           },
         ],
