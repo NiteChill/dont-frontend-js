@@ -1,0 +1,29 @@
+.arcadeLanding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      102deg,
+      rgba(131, 0, 0, 0.2) 11.75%,
+      rgba(0, 0, 0, 0.2) 58.99%
+    ),
+    #151515;
+  & > div {
+    display: flex;
+    height: 5rem;
+    & > div {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      &:last-child {
+        display: flex;
+        justify-content: end;
+        & > svg {
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
