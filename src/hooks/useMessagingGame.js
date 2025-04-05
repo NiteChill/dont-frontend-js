@@ -38,10 +38,8 @@ export const useMessagingGame = () => {
                 onMessageChosen(nextAnswer);
             }, 200);
         } else {
-            setTimeout(() => {
-                setHistory((pastHistory) => [...pastHistory, choice.nextNodeId]);
-                containerRef.current?.scrollTo({ top: containerRef.current?.scrollHeight ?? 0, behavior: 'instant' });
-            }, 1000);
+            setHistory((pastHistory) => [...pastHistory, choice.nextNodeId]);
+            containerRef.current?.scrollTo({ top: containerRef.current?.scrollHeight ?? 0, behavior: 'instant' });
         }
     }, [game]);
 

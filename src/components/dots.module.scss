@@ -1,0 +1,17 @@
+.dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--inverse-surface);
+    border-radius: 1px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    padding: 10px;
+    background-color: var(--surface-4);
+    gap: 6px;
+    border-radius: 5px;
+}
