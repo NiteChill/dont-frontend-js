@@ -14,10 +14,11 @@
     justify-content: center;
     width: 100%;
     padding: 1rem;
-    background: var(--surface-1);
+    background: var(--surface-2);
     z-index: 3;
     & > h1 {
       font-size: 1.25rem;
+      line-height: 1.2;
     }
   }
   & > section {

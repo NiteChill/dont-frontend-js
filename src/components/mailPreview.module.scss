@@ -1,0 +1,44 @@
+.mailPreview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--outline-variant-2);
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    color: var(--on-surface);
+    & > h4 {
+      flex: 1;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      height: 1.375rem;
+    }
+    & > p {
+      color: var(--on-surface-variant);
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      height: 1.1875rem;
+    }
+  }
+  & > h3 {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    height: 1.1875rem;
+  }
+  & > p {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    height: 1.1875rem;
+    color: var(--on-surface-variant-2);
+  }
+}

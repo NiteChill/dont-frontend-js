@@ -12,11 +12,11 @@ export const Messages = () => {
       translateY: 72,
       translateX: -96,
       scale: '0',
-      duration: 0.3,
+      duration: 0.4,
       ease: 'power1.out',
-    })
+    });
   });
-  
+
   const {
     containerRef,
     registerMessageContainerRef,
@@ -38,12 +38,33 @@ export const Messages = () => {
       </header>
       <section ref={containerRef}>
         <div className={styles.content}>
-          {history.map((nodeId, i) => <SentMessage ref={(ref) => registerMessageContainerRef(ref, i)} key={nodeId} nodeId={nodeId} chart={game.chart} showAdvice={currentAdviceIdx === i} anchorRef={containerRef} />)}
+          {history.map((nodeId, i) => (
+            <SentMessage
+              ref={(ref) => registerMessageContainerRef(ref, i)}
+              key={nodeId}
+              nodeId={nodeId}
+              chart={game.chart}
+              showAdvice={currentAdviceIdx === i}
+              anchorRef={containerRef}
+            />
+          ))}
         </div>
       </section>
       <footer>
-        {currentChoices.map((choice) => <MessageChoice key={`choice-${choice.id}`} choice={choice} onMessageChosen={onMessageChosen} />)}
-        {result !== null && <Result result={result} onShowAdvice={goToNextAdvice} currentAdviceIdx={currentAdviceIdx} />}
+        {currentChoices.map((choice) => (
+          <MessageChoice
+            key={`choice-${choice.id}`}
+            choice={choice}
+            onMessageChosen={onMessageChosen}
+          />
+        ))}
+        {result !== null && (
+          <Result
+            result={result}
+            onShowAdvice={goToNextAdvice}
+            currentAdviceIdx={currentAdviceIdx}
+          />
+        )}
       </footer>
     </div>
   );
