@@ -38,5 +38,15 @@
       flex-direction: column;
       flex: 1;
     }
+    & .emptyMail {
+      display: flex;
+      gap: 0.75rem;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      & p {
+        font-size: 1rem;
+      }
+    }
   }
 }

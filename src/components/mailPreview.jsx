@@ -1,8 +1,9 @@
 import styles from './mailPreview.module.scss';
+import classNames from 'classnames';
 
-export const MailPreview = ({ children, title, author, date, onClick }) => {
+export const MailPreview = ({ children, title, author, date, onClick, active }) => {
   return (
-    <div className={styles.mailPreview} onClick={onClick}>
+    <div className={classNames(styles.mailPreview, {[styles.active]:active})} onClick={onClick}>
       <div>
         <span className='material-symbols-outlined'>star</span>
         <h4>{author}</h4>

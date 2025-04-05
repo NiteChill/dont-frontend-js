@@ -5,6 +5,14 @@
   width: 100%;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--outline-variant-2);
+  transition: background .2s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--surface-4);
+  }
+  &.active{
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+  }
   & > div {
     display: flex;
     align-items: center;
