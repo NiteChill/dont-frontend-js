@@ -1,0 +1,16 @@
+.choiceMessage {
+    border: 2px solid var(--outline-variant-2);
+    border-radius: 32px;
+    max-width: 320px;
+    padding: 24px 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background: color-mix(
+        in srgb,
+        var(--surface-4) 60%,
+        var(--inverse-on-surface) 40%
+      );
+    }
+  }

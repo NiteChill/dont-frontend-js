@@ -6,50 +6,57 @@
                 "id": "answer-1",
                 "successPercentage": 60,
                 "nextNodeId": "2",
-                "message": "Bonjour… euh non, pas marié. C’est gentil ce que tu dis, mais on ne se connaît pas, non ? 😅"
+                "message": "Bonjour… euh non, pas marié. C’est gentil ce que tu dis, mais on ne se connaît pas, non ?",
+                "advice": "Il est important de montrer que vous n'êtes pas à l'aise avec l'idée de vous engager tout de suite, surtout si vous ne connaissez pas la personne. Soyez respectueux et clair, tout en restant courtois."
             },
             "answer-2": { 
                 "id": "answer-2",
                 "successPercentage": 40,
                 "nextNodeId": "2",
-                "message": "Salut 😊 merci, c’est gentil… Non, je ne suis pas marié. Et toi ?",
-                "advice": "TODO"
+                "message": "Salut merci, c’est gentil… Non, je ne suis pas marié. Et toi ?",
+                "advice": "Cette réponse est plus ouverte et invite à une conversation. Cela montre que vous êtes intéressé tout en restant prudent. Il est important de poser des questions ouvertes pour mieux connaître l'autre personne."
             },
             "answer-3": {
                 "id": "answer-3",
                 "successPercentage": 0,
                 "nextNodeId": "3",
-                "message": "C’est vrai que tu es très charmante… Tu vis où ?"
+                "message": "C’est vrai que tu es très charmante… Tu vis où ?",
+                "advice": "Il est bon de complimenter la personne, mais assurez-vous de ne pas être trop direct. Il faut également éviter de partager des détails trop personnels dès le début."
             },
             "answer-4": {
                 "id": "answer-4",
                 "successPercentage": 70,
                 "nextNodeId": "4",
-                "message": "Je préfère ne pas trop en dire pour l’instant, désolé… j’suis un peu discret là-dessus.?"
+                "message": "Je préfère ne pas trop en dire pour l’instant, désolé… j’suis un peu discret là-dessus.",
+                "advice": "Il est parfaitement acceptable de ne pas vouloir partager trop d'informations au début. Restez respectueux et donnez le temps à la conversation de se développer naturellement."
             },
             "answer-5": {
                 "id": "answer-5",
                 "successPercentage": 30,
                 "nextNodeId": "5",
-                "message": "Je suis en France, près de Lyon. Tu comptes revenir en France ?"
+                "message": "Je suis en France, près de Lyon. Tu comptes revenir en France ?",
+                "advice": "Évitez de partager des informations personnelles à des inconnus sur Internet, encore plus si ces informations vous rendent identifiables"
             },
             "answer-6": {
                 "id": "answer-6",
                 "successPercentage": 70,
                 "nextNodeId": "6",
-                "message": "Je comprends, mais je préfère y aller doucement. C’est juste une question de prudence, pas contre toi."
+                "message": "Je comprends, mais je préfère y aller doucement. C’est juste une question de prudence, pas contre toi.",
+                "advice": "Exprimez vos préoccupations de manière calme et polie. La prudence est importante, et vous pouvez toujours expliquer que vous préférez avancer lentement dans une nouvelle relation."
             },
             "answer-7": {
                 "id": "answer-7",
                 "successPercentage": 70,
                 "nextNodeId": "7", 
-                "message": "Je ne sais pas trop… on se connaît à peine et je n’ai pas l’impression que tu es très sincère..."
+                "message": "Je ne sais pas trop… on se connaît à peine et je n’ai pas l’impression que tu es très sincère...",
+                "advice": "Il est important d'exprimer vos doutes de manière honnête. Faites attention à ne pas accuser l'autre personne, mais partagez vos préoccupations de façon claire."
             },
             "answer-8": {
                 "id": "answer-8",
                 "successPercentage": 30,
                 "nextNodeId": "8", 
-                "message": "Je ne sais pas trop… on se connaît à peine, mais c’est vrai que tu es touchante."
+                "message": "Je ne sais pas trop… on se connaît à peine, mais c’est vrai que tu es touchante.",
+                "advice": "Il est normal de se montrer empathique, mais n'oubliez pas que vous avez besoin de temps pour mieux connaître la personne avant de vous engager."
             },
             "answer-9": {
                 "id": "answer-9",
@@ -61,64 +68,75 @@
                 "id": "answer-10",
                 "successPercentage": 30, 
                 "nextNodeId": "11", 
-                "message": "Oh… je suis désolé d’entendre ça. Tu peux faire quelque chose ?"
+                "message": "Oh… je suis désolé d’entendre ça. Tu peux faire quelque chose ?",
+                "advice": "Montrez de la compassion, mais ne vous précipitez pas à prendre des décisions hâtives. Soyez à l'écoute sans vous engager précipitamment."
             },
             "answer-11": {
                 "id": "answer-11",
                 "successPercentage": 70, 
                 "nextNodeId": "9",
-                "message": "Je suis désolé pour ta tante, vraiment… mais je commence à avoir un peu de mal à comprendre."
+                "message": "Je suis désolé pour ta tante, vraiment… mais je commence à avoir un peu de mal à comprendre.",
+                "advice": "Exprimez votre empathie, mais en même temps, faites attention à ce qui semble étrange. C'est un bon moment pour poser des questions pour clarifier les choses."
             },
             "answer-12": {
                 "id": "answer-12",
                 "successPercentage": 70, 
                 "nextNodeId": "10",
-                "message": "Ce n’est pas que je n’ai pas confiance en toi… mais ces histoires d’argent, c’est assez étrange. Et tu n’as jamais parlé de ta tante avant, ni de ce problème avec l’hôpital. C’est comme si tout ça sortait de nulle part…"
+                "message": "Ce n’est pas que je n’ai pas confiance en toi… mais ces histoires d’argent, c’est assez étrange. Et tu n’as jamais parlé de ta tante avant, ni de ce problème avec l’hôpital. C’est comme si tout ça sortait de nulle part…",
+                "advice": "C'est un bon moment pour faire part de vos doutes. Soyez honnête et exprimez-vous clairement, mais sans juger l'autre personne trop durement."
             },
             "answer-13": {
                 "id": "answer-13",
                 "successPercentage": 100, 
-                "message": "Je suis désolé si je t’ai blessée, mais je préfère être honnête. Si tu as vraiment besoin d’aide, je te conseille de chercher d’autres solutions. Mais ce n’est pas en manipulant les gens que ça va marcher. Bonne chance, Brigitte."
+                "message": "Je suis désolé si je t’ai blessée, mais je préfère être honnête. Si tu as vraiment besoin d’aide, je te conseille de chercher d’autres solutions. Mais ce n’est pas en manipulant les gens que ça va marcher. Bonne chance, Brigitte.",
+                "advice": "C'est essentiel de rester ferme et honnête. Si vous sentez que la situation devient manipulatrice, couper court est la meilleure décision."
             },
             "answer-14": {
                 "id": "answer-14",
                 "successPercentage": 80, 
                 "nextNodeId": "12", 
-                "message": "Oh mince… Tu n’as pas d’assurance ?"
+                "message": "Oh mince… Tu n’as pas d’assurance ?",
+                "advice": "Posez des questions pour mieux comprendre la situation. Assurez-vous de ne pas vous laisser prendre dans une situation où vous vous sentez obligé d'agir rapidement."
             },
             "answer-15": {
                 "id": "answer-15",
                 "successPercentage": 80,
-                "message": "Non, désolé, je n’envoie pas d’argent par Internet"
+                "message": "Non, désolé, je n’envoie pas d’argent par Internet",
+                "advice": "Il est important de fixer des limites claires. Ne vous laissez pas influencer par des demandes financières, surtout en ligne, où les arnaques sont fréquentes."
             },
             "answer-16": {
                 "id": "answer-16",
                 "successPercentage": 0,
                 "nextAnswerId": "answer-18", 
-                "message": "Bon d’accord"
+                "message": "Bon d’accord",
+                "advice": "Même si vous êtes d'accord, gardez un oeil vigilant. Ne vous laissez pas emporter par l'émotion et restez critique face à des demandes qui ne vous semblent pas légitimes."
             },
             "answer-17": {
                 "id": "answer-17",
                 "successPercentage": 60, 
                 "nextNodeId": "13", 
-                "message": "Je ne sais pas trop… Tu es sûre que c’est réel ?"
+                "message": "Je ne sais pas trop… Tu es sûre que c’est réel ?",
+                "advice": "Doutez toujours lorsqu'une situation semble trop belle pour être vraie. Vérifiez les informations et n'hésitez pas à demander plus de détails."
             },
             "answer-18": {
                 "id": "answer-18", 
                 "successPercentage": 10, 
                 "nextNodeId": "14", 
-                "message": "Et comment je peux t’envoyer ça ?"
+                "message": "Et comment je peux t’envoyer ça ?",
+                "advice": "Soyez toujours prudent quand quelqu'un vous demande de l'argent, surtout si vous ne vous êtes pas encore bien connus. Pensez à la sécurité avant tout."
             },
             "answer-19": {
                 "id": "answer-19",
                 "successPercentage": 20, 
                 "nextNodeId": "15",   
-                "message": "Tu dis que je suis ton seul espoir, mais ça me paraît bizarre qu’on se parle si peu de temps et que tu me demandes déjà de l’argent. Ça n’ajoute pas à ma confiance."
+                "message": "Tu dis que je suis ton seul espoir, mais ça me paraît bizarre qu’on se parle si peu de temps et que tu me demandes déjà de l’argent. Ça n’ajoute pas à ma confiance.",
+                "advice": "Exprimez vos préoccupations en restant respectueux. Faites attention aux demandes urgentes ou pressantes."
             },
             "answer-20": {
                 "id": "answer-20",
                 "successPercentage": 100,  
-                "message": "Je fais pas de virements par Western Union, désolé"
+                "message": "Je fais pas de virements par Western Union, désolé",
+                "advice": "Refuser poliment les demandes financières est essentiel pour se protéger. Expliquez clairement vos raisons sans culpabiliser."
             },
             "answer-21": {
                 "id": "answer-21",
@@ -128,7 +146,8 @@
             "answer-22": {
                 "id": "answer-22",
                 "successPercentage": 100, 
-                "message": "Moi je t’avoue que j’ai encore des doutes… C’est rien contre toi, c’est juste que j’ai vu pas mal de trucs sur les arnaques en ligne. Désolé, mais je vais couper court"
+                "message": "Moi je t’avoue que j’ai encore des doutes… C’est rien contre toi, c’est juste que j’ai vu pas mal de trucs sur les arnaques en ligne. Désolé, mais je vais couper court",
+                "advice": "Soyez clair et résolu lorsque vous exprimez vos doutes. Il est préférable de s'éloigner d'une situation qui vous semble suspecte."
             }
         },
         "messages": {
@@ -138,77 +157,92 @@
                 "choiceIds": [
                     "answer-1",
                     "answer-2"
-                ]
+                ],
+                "advice": "Le message commence très affectueusement, alors que vous ne connaissez pas la personne. Elle parle de « destin », dit que vous avez un beau sourire… C’est une façon de flatter pour vous mettre en confiance rapidement. Ne jamais donner d’informations personnelles à une personne inconnue, même si elle semble gentille."
             },
             "2": {
                 "id": "2",
                 "message": "Oh non, je suis célibataire aussi. J’ai eu le cœur brisé dans le passé… mais je sens que tu es différent 🥺 Je ne sais pas pourquoi, mais je me sens bien quand je te parle, même si c’est la première fois 😍",
-                "choiceIds": ["answer-3"]
+                "choiceIds": ["answer-3"],
+                "advice": "Elle raconte avoir souffert pour créer un lien émotionnel. Elle veut vous faire croire que vous êtes spécial dès les premiers messages. Cela peut être très flatteur, mais c’est souvent utilisé pour qu’on baisse sa garde. Attention si la personne insiste sur l’amour trop vite."
             },
             "3": {
                 "id": "3",
                 "message": "Je suis à Abidjan en Côte d’Ivoire pour le moment… Je suis née en France mais je suis venue ici pour aider ma tante qui est malade. Et toi, tu es où mon cœur ?",
-                "choiceIds": ["answer-4", "answer-5"]
+                "choiceIds": ["answer-4", "answer-5"],
+                "advice": "Elle donne une histoire 'touchante' (maladie d’un proche, aide humanitaire…). Cela sert à expliquer pourquoi elle est loin. C’est souvent le début d’un scénario pour justifier une future demande d’argent. Ne donnez jamais votre localisation à ce stade."
             },
             "4": {
                 "id": "4",
                 "message": "Ah bon ? 😕 Pourquoi tu me fais pas confiance ? Tu penses que je suis une mauvaise personne ? Moi je t’ai dit où je suis… C’est normal dans une relation, non ? De se connaître un peu…",
-                "choiceIds": ["answer-6", "answer-5"]
+                "choiceIds": ["answer-6", "answer-5"],
+                "advice": "Ici, elle vous fait culpabiliser parce que vous ne donnez pas d’infos. Elle retourne la situation pour vous faire passer pour la personne méfiante. C’est une technique courante de manipulation. Gardez vos limites, c’est votre droit."
             },
             "5": {
                 "id": "5",
                 "message": "Oui bien sûr mon amour 😍 dès que j’en ai les moyens. Je veux te voir en vrai, te prendre dans mes bras… j’ai tellement besoin d’amour et de tendresse 😔 Tu sais, je me sens déjà attachée à toi… Est-ce que tu ressens la même chose ? ❤️",
-                "choiceIds": ["answer-7", "answer-8"] 
+                "choiceIds": ["answer-7", "answer-8"],
+                "advice": "Elle utilise des mots d’amour intenses pour créer un attachement rapide. Elle vous parle comme si vous étiez déjà en couple. Cela peut sembler gentil, mais c’est une stratégie pour préparer une demande affective ou financière. Gardez la tête froide si vous vous sentez flatté trop vite."
             },
             "6": {
                 "id": "6",
                 "message": "D’accord… je comprends… enfin, un peu 😔 Mais si tu tiens à moi, tu pourrais au moins me montrer que tu veux vraiment construire quelque chose. Parce que là, j’ai un peu l’impression que tu caches des choses…",
-                "choiceIds": ["answer-22", "answer-9"]
+                "choiceIds": ["answer-22", "answer-9"],
+                "advice": "Elle joue sur l’ambiguïté : elle dit comprendre, mais vous fait sentir coupable de votre prudence. C’est une autre forme de pression. Une vraie relation se construit avec respect et patience. Si on vous pousse à 'prouver' quelque chose, méfiez-vous."
             },
             "7": {
                 "id": "7",
                 "message": "Je sais que ç a doit être dur à entendre, mais je n’ai plus personne ici… vraiment personne. C’est pour ça que je te demande de m’aider, toi, mon amour… Il me manque juste 200 euros pour que ma tante puisse recevoir les soins qu’elle mérite 😢 Je n’ai que toi en qui je puisse avoir confiance…",
-                "choiceIds": ["answer-11", "answer-14", "answer-15", "answer-18"]
+                "choiceIds": ["answer-11", "answer-14", "answer-15", "answer-18"],
+                "advice": "Elle commence à parler d’argent (200 € pour sa tante). C’est souvent le moment où l’arnaque devient visible. Elle vous fait croire que vous êtes sa seule chance. C’est FAUX : c’est une histoire inventée pour obtenir de l’argent. Ne jamais envoyer d’argent à une personne qu’on ne connaît que par Internet."
             },
             "8": {
                 "id": "8",
                 "message": "Ce n’est pas le temps qui compte, c’est ce que l’on ressent. Et moi, je ressens quelque chose de fort 😢 Mais en ce moment je suis très inquiète… Ma tante a besoin de soins urgents, et ici, tout est payant. Je suis seule pour gérer tout ça… c’est trop pour moi 😞",
-                "choiceIds": ["answer-11", "answer-10"]
+                "choiceIds": ["answer-11", "answer-10"],
+                "advice": "Elle joue encore plus sur l’émotion, parlant de détresse, solitude, urgence médicale. C’est un discours conçu pour créer un sentiment d’urgence. C’est très manipulateur. Quand quelqu’un insiste autant sur sa souffrance, demandez-vous pourquoi il vient vers vous, un inconnu."
             },
             "9": {
                 "id": "9",
                 "message": "Tu n’as pas confiance en moi ? 😢 Tu crois vraiment que je ferais ça si je n’étais pas dans une situation désespérée ?",
-                "choiceIds": ["answer-12", "answer-18"]
+                "choiceIds": ["answer-12", "answer-18"],
+                "advice": "Elle vous accuse de ne pas lui faire confiance. C’est du chantage émotionnel : elle veut que vous doutiez de vous-même. C’est normal et sain de ne pas faire confiance tout de suite à quelqu’un sur Internet."
             },
             "10": {
                 "id": "10",
                 "message": "Tu penses que je mens, c’est ça ? Je suis tellement blessée… je me confie à toi, et tu me traites comme ça ? 😔",
-                "choiceIds": ["answer-13", "answer-18", "answer-17"]
+                "choiceIds": ["answer-13", "answer-18", "answer-17"],
+                "advice": "Elle se dit blessée parce que vous doutez. Encore une fois, elle essaie de vous faire culpabiliser. Un inconnu qui dit être blessé par votre prudence est probablement en train de vous manipuler."
             },
             "11": {
                 "id": "11", 
-                "message": "J’essaie, mais il me manque 200 euros pour l’inscription à la clinique. Sans ça, ils ne la prendront pas en charge… J’ai honte de te demander, mais tu es la seule personne à qui je tiens vraiment 😔 sEst-ce que tu pourrais m’aider, même juste un peu ? Je te jure que je te rembourserai dès que je peux… 🙏",
-                "choiceIds": ["answer-15", "answer-18", "answer-14"]
+                "message": "J’essaie, mais il me manque 200 euros pour l’inscription à la clinique. Sans ça, ils ne la prendront pas en charge… J’ai honte de te demander, mais tu es la seule personne à qui je tiens vraiment 😔 Est-ce que tu pourrais m’aider, même juste un peu ? Je te jure que je te rembourserai dès que je peux… 🙏",
+                "choiceIds": ["answer-15", "answer-18", "answer-14"],
+                "advice": "Elle redemande de l’argent (200 €), avec un nouveau prétexte : l’inscription à la clinique. Elle dit avoir honte, pour vous faire penser qu’elle est sincère. Mais c’est exactement ce que font les escrocs : ils racontent une situation triste, jurent de rembourser, et ne le font jamais."
             },
             "12": {
                 "id": "12",
                 "message": "Non, ici en Côte d’Ivoire, tout se paie 😭 Et je n’ai personne pour m’aider…",
-                "choiceIds": ["answer-16", "answer-17"]
+                "choiceIds": ["answer-16", "answer-17"],
+                "advice": "Encore une justification pour que vous lui envoyiez de l’argent. Elle insiste sur le fait qu’elle n’a 'personne d’autre'. C’est un discours typique d’arnaque sentimentale. Si quelqu’un insiste autant pour de l’argent, c’est une alerte rouge."
             },
             "13": {
                 "id": "13",
                 "message": "Tu crois que je mentirais sur la santé de ma maman ? 😢 Je t’aime, Jean… Je te demande juste un petit geste. Tu es mon seul espoir 💔",
-                "choiceIds": ["answer-18", "answer-19"]
+                "choiceIds": ["answer-18", "answer-19"],
+                "advice": "Elle insiste qu’elle ne ment pas, et dit qu’elle vous aime. C’est très fort, très rapide… et très louche. Elle joue sur vos sentiments pour que vous vous sentiez obligé d’aider. Mais c’est souvent une fausse histoire avec de faux sentiments."
             },
             "14": {
                 "id": "14",
                 "message": "Par Western Union mon cœur… Tu mets le nom de mon cousin : Kouadio Jean-Marc, à Abidjan. Je t’enverrai une photo après 🙏",
-                "choiceIds": ["answer-20", "answer-21"]
+                "choiceIds": ["answer-20", "answer-21"],
+                "advice": "Elle donne des instructions précises pour envoyer l’argent (Western Union, nom d’un tiers). C’est la signature classique d’un brouteur. À ce stade, il ne faut surtout rien envoyer. Coupez immédiatement la conversation."
             },
             "15": {
                 "id": "15",
-                "message": "Je comprends ta méfiance, mais je suis vraiment désespérée 😔 Ma maman a besoin de soins, et je n’ai personne d’autre à qui demander. Tu es mon seul espoir. 💔",
-                "choiceIds": ["answer-18"]
+                "message": "sJe compsrends ta méfiance, mais je suis vraiment désespérée 😔 Ma maman a besoin de soins, et je n’ai personne d’autre à qui demander. Tu es mon seul espoir. 💔",
+                "choiceIds": ["answer-18"],
+                "advice": "Encore un message de pression émotionnelle. Elle se dit désespérée, répète qu’elle n’a personne d’autre. C’est du conditionnement affectif : elle veut que vous vous sentiez responsable. Ce n’est pas à vous d’envoyer de l’argent à un inconnu sur Internet."
             }
         }
     }

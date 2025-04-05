@@ -15,20 +15,59 @@
     width: 100%;
     padding: 1rem;
     background: var(--surface-1);
+    z-index: 3;
     & > h1 {
       font-size: 1.25rem;
     }
   }
   & > section {
+    padding: 20px 48px 48px 48px;
+    font-size: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    flex-direction: column-reverse;
     flex: 1;
-    width: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    & > .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: 24px;
+      flex: 1;
+      width: 100%;
+    }
   }
   & > footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
     width: 100%;
     padding: 2rem 3rem 3rem;
     border-top: 1px solid var(--outline-variant-2);
+    gap: 10px;
+    min-height: 119px;
   }
 }
