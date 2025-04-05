@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+:root {
+  --notification: #FF1919;
+
+  --primary: rgba(148, 166, 255, 1);
+  --on-primary: rgba(0, 19, 86, 1);
+  --primary-container: rgba(20, 56, 179, 1);
+  --on-primary-container: rgba(221, 225, 255, 1);
+  --surface-0: rgba(14, 14, 14, 1);
+  --surface-1: rgba(27, 27, 27, 1);
+  --surface-2: rgba(38, 38, 38, 1);
+  --surface-3: rgba(44, 44, 44, 1);
+  --surface-4: rgba(48, 48, 48, 1);
+  --on-surface: rgba(226, 226, 226, 1);
+  --on-surface-variant: rgba(198, 198, 198, 1);
+  --on-surface-variant-2: rgba(171, 171, 171, 1);
+  --outline: rgba(145, 145, 145, 1);
+  --outline-variant: rgba(71, 71, 71, 1);
+  --outline-variant-2: rgba(82, 82, 82, 1);
+  --inverse-surface: rgba(255, 255, 255, 1);
+  --inverse-on-surface: rgba(27, 27, 27, 1);
+  --inverse-on-surface-variant: rgba(71, 71, 71, 1);
+  --inverse-primary: rgba(20, 56, 179, 1);
+  --inverse-on-primary: rgba(255, 255, 255, 1);
+}
+
+/* @theme inline {
+  --color-brand: var(--brand);
+  --color-source: var(--source-hct277-63-59);
+  --color-primary: var(-primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-4: var(--surface-4);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-on-surface-variant-2: var(--on-surface-variant-2);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-outline-variant-2: var(--outline-variant-2);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-on-surface-variant: var(--inverse-on-surface-variant);
+  --color-inverse-primary: var(--inverse-primary);
+  --color-inverse-on-primary: var(--inverse-on-primary);
+} */

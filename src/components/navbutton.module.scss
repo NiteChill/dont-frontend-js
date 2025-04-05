@@ -1,0 +1,31 @@
+.navbutton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100rem;
+  background: var(--inverse-surface);
+  transition: scale 0.2s ease-in, background 0.2s ease-out;
+
+  & > div {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 0.75em;
+    height: 0.75rem;
+    border-radius: 100rem;
+    background: var(--notification);
+  }
+  &:hover {
+    background: color-mix(
+      in srgb,
+      var(--inverse-surface) 84%,
+      var(--inverse-on-surface) 16%
+    );
+  }
+  &:active {
+    scale: 0.95;
+  }
+}
