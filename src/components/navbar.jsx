@@ -4,22 +4,42 @@ import msgImg from '../assets/images/messages.png';
 import gmailImg from '../assets/images/gmail.png';
 import xImg from '../assets/images/x.png';
 import tinderImg from '../assets/images/tinder.png';
+import { GameKeys } from '../constants/games';
+import { useNotifications } from '../contexts/useNotifications';
+
+const games = [
+  {
+    key: GameKeys.Chat,
+    img: msgImg,
+    size: 28,
+  },
+  {
+    key: GameKeys.Mail,
+    img: gmailImg,
+    size: 28,
+  },
+  {
+    key: GameKeys.SocialMedia,
+    img: xImg,
+    size: 25,
+  },
+  {
+    key: GameKeys.Hookup,
+    img: tinderImg,
+    size: 26,
+  },
+];
 
 export const Navbar = () => {
+  const notifications = useNotifications();
+
   return (
     <nav className={styles.navbar}>
-      <Navbutton href='messages' size='28'>
-        {msgImg}
-      </Navbutton>
-      <Navbutton href='gmail' size='28'>
-        {gmailImg}
-      </Navbutton>
-      <Navbutton href='x' size='25'>
-        {xImg}
-      </Navbutton>
-      <Navbutton href='tinder' size='26'>
-        {tinderImg}
-      </Navbutton>
+      {games.map(({ key, img, size }) => (
+        <Navbutton key={key} href={key} size={size} notification={!!notifications[key]}>
+          {img}
+        </Navbutton>
+      ))}
     </nav>
   );
 };

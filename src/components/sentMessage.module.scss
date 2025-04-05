@@ -1,0 +1,53 @@
+.receivedMessageWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.receivedMessage {
+    max-width: 480px;
+    border-radius: 32px;
+    padding: 16px 24px;
+    background-color: var(--surface-4);
+}
+
+.avatar {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--outline-variant-2);
+    margin-right: 15px;
+}
+
+.sentMessage {
+    max-width: 480px;
+    border-radius: 32px;
+    padding: 16px 24px;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    align-self: flex-end;
+}
+
+.advice {
+    width: 350px;
+    background-color: var(--inverse-surface);
+    padding: 16px 24px;
+    border-radius: 32px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    &.display {
+        opacity: 1;
+    }
+}
+
+.infoIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    margin: 8px;
+    float: left;
+}

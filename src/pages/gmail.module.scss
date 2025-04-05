@@ -1,0 +1,42 @@
+.gmail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 75rem;
+  border-radius: 2rem;
+  background: var(--surface-0);
+  color: var(--on-surface);
+  overflow: hidden;
+  transform-origin: bottom center;
+  & > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    background: var(--surface-2);
+    & > h1 {
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+  }
+  & > section {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    flex: 1;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      width: 28.75rem;
+      height: 100%;
+      background: var(--surface-1);
+      border-right: 1px solid var(--outline-variant);
+    }
+    & > article {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}
