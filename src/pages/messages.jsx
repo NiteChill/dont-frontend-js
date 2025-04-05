@@ -43,7 +43,7 @@ export const Messages = () => {
       </section>
       <footer>
         {currentChoices.map((choice) => <MessageChoice key={`choice-${choice.id}`} choice={choice} onMessageChosen={onMessageChosen} />)}
-        {result !== null && <Result result={result} onShowAdvice={goToNextAdvice} />}
+        {result !== null && <Result result={result} onShowAdvice={goToNextAdvice} currentAdviceIdx={currentAdviceIdx} />}
       </footer>
     </div>
   );
