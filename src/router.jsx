@@ -3,7 +3,7 @@ import App from './App';
 import { Landing } from './pages/landing';
 import { Messages } from './pages/messages';
 import { Gmail } from './pages/gmail';
-import { X } from './pages/X';
+import { X } from './pages/x';
 import { Tinder } from './pages/Tinder';
 import { Layout } from './components/layout';
 

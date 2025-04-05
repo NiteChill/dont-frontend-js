@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  gap: 16px;
+  padding: 32px 24px;
+  position: relative;
+  
+  & .profilePicture {
+    border-radius: 16px;
+    width: 32px;
+    height: 32px;
+  }
+  & .textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    & .textWrapperContent {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      & .topText {
+        display: flex;
+        flex-flow: row;
+        gap: 8px;
+        & .profileName {
+          font-weight: 500;
+        }
+        & .timeSince {
+          color: var(--on-surface-variant-2);
+        }
+      }
+    }
+  }
+}

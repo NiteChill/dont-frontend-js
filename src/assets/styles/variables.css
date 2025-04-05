@@ -3,8 +3,8 @@
 :root {
   --notification: #FF1919;
 
-  --primary: rgba(148, 166, 255, 1);
-  --on-primary: rgba(0, 19, 86, 1);
+  --primary: #94a6ff;
+  --on-primary: #001356;
   --primary-container: rgba(20, 56, 179, 1);
   --on-primary-container: rgba(221, 225, 255, 1);
   --surface-0: rgba(14, 14, 14, 1);
