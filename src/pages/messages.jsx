@@ -1,10 +1,12 @@
 import { useGSAP } from '@gsap/react';
-import styles from './messages.module.scss';
 import gsap from 'gsap';
+
 import { SentMessage } from '../components/sentMessage';
 import { MessageChoice } from '../components/messageChoice';
 import { Result } from '../components/result';
 import { useMessagingGame } from '../hooks/useMessagingGame';
+
+import styles from './messages.module.scss';
 
 export const Messages = () => {
   useGSAP(() => {

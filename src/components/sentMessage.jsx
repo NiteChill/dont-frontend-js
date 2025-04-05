@@ -12,8 +12,27 @@ import {
 import mergeRefs from 'merge-refs';
 import cn from 'classnames';
 import { useInView } from "react-intersection-observer";
+import { Dots } from './dots';
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export const SentMessage = forwardRef(({ nodeId, chart, showAdvice, anchorRef }, ref) => {
+    useGSAP(() => {
+        const isAnswerNode = isAnswer(nodeId);
+        const animation = gsap.from(`#node-${nodeId}`, {
+            translateY: 72,
+            translateX: isAnswerNode ? 96 : -96,
+            scale: '0',
+            height: '0',
+            duration: 0.3,
+            ease: 'power1.out',
+        });
+        if (!isAnswerNode) {
+            animation.delay(1);
+        }
+    }, [nodeId]);
+
     const isAnswerNode = isAnswer(nodeId);
     const node = useMemo(() => isAnswerNode ? chart.choices[nodeId] : chart.messages[nodeId], [nodeId, chart]);
 
@@ -29,12 +48,13 @@ export const SentMessage = forwardRef(({ nodeId, chart, showAdvice, anchorRef },
       });
   
     return <>
-        <div ref={mergeRefs(ref, refs.setReference, viewRef)} className={cn({ [styles.sentMessage]: isAnswerNode, [styles.receivedMessageWrapper]: !isAnswerNode })}>
+        <div id={isAnswerNode ? `node-${nodeId}` : undefined} ref={mergeRefs(ref, refs.setReference, viewRef)} className={cn({ [styles.sentMessage]: isAnswerNode, [styles.receivedMessageWrapper]: !isAnswerNode })}>
             {isAnswerNode ? node.message : (
                 <>
                     <span className={styles.avatar}></span>
-                    <div className={styles.receivedMessage}>
-                    {node.message}
+                    <Dots id={`dots-${nodeId}`} />
+                    <div id={!isAnswerNode ? `node-${nodeId}` : undefined} className={styles.receivedMessage}>
+                        {node.message}
                     </div>
                 </>
             )}
