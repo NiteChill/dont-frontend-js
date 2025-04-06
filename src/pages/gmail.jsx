@@ -1,12 +1,12 @@
-import { useGSAP } from "@gsap/react";
-import styles from "./gmail.module.scss";
-import gsap from "gsap";
-import { MailPreview } from "../components/mailPreview";
-import profilePicture from "../assets/images/x-profiles/brigitte.png";
-import { Mail } from "../components/Mail";
-import { getMails } from "../api/mails";
-import { useMemo, useState } from "react";
-import { useCallback } from "react";
+import { useGSAP } from '@gsap/react';
+import styles from './gmail.module.scss';
+import gsap from 'gsap';
+import { MailPreview } from '../components/mailPreview';
+import profilePicture from '../assets/images/x-profiles/brigitte.png';
+import { Mail } from '../components/Mail';
+import { getMails } from '../api/mails';
+import { useEffect, useMemo, useState } from 'react';
+import { useCallback } from 'react';
 
 export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
@@ -18,21 +18,34 @@ export const Gmail = () => {
 
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
-  
 
   useGSAP(() => {
-    gsap.from("#gmail", {
+    gsap.from('#gmail', {
       translateY: 72,
       translateX: -32,
-      scale: "0",
+      scale: '0',
       // opacity: 0,
       duration: 0.4,
-      ease: "power1.out",
+      ease: 'power1.out',
     });
   });
 
   const addValidation = useCallback((validation) => {
-    setValidatedMails((oldValidations) => [...oldValidations, validation]);
+    setValidatedMails((oldValidations) => {
+      const newValue = [...oldValidations, validation];
+      if (mails.length == 0) {
+        let p = 0;
+        console.log(validatedMails);
+
+        validatedMails.forEach((e) => {
+          p += e.points;
+        });
+
+        console.log(points);
+      }
+      return newValue;
+    });
+    
   }, []);
 
   return (
