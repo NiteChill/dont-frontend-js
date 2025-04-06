@@ -6,7 +6,6 @@ import { Badges } from "./badges/badges";
 export const Layout = () => {
   return (
     <main className={styles.layout}>
-      {/* <Badges></Badges> */}
       <Outlet />
       <Navbar />
     </main>

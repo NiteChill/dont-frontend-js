@@ -1,32 +1,42 @@
-import { useGSAP } from '@gsap/react';
-import styles from './gmail.module.scss';
-import gsap from 'gsap';
-import { MailPreview } from '../components/mailPreview';
-import profilePicture from '../assets/images/x-profiles/brigitte.png';
-import { Mail } from '../components/Mail';
-import { getMails } from '../api/mails';
-import { useEffect, useMemo, useState } from 'react';
-import { useCallback } from 'react';
+import { useGSAP } from "@gsap/react";
+import styles from "./gmail.module.scss";
+import gsap from "gsap";
+import { MailPreview } from "../components/mailPreview";
+import profilePicture from "../assets/images/x-profiles/brigitte.png";
+import { Mail } from "../components/Mail";
+import { getMails } from "../api/mails";
+import { Badges } from "../components/badges/badges"
+import { useEffect, useMemo, useState } from "react";
+import { useCallback } from "react";
 
 export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
   const mailsArray = useMemo(() => Object.values(mails), []);
-  
+
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
 
-  const unTreatedMails = useMemo(() => mailsArray.filter((mail) => !validatedMails.some((validatedMail) => validatedMail.id === mail.id)), [mailsArray,  validatedMails]);
+  const unTreatedMails = useMemo(
+    () =>
+      mailsArray.filter(
+        (mail) =>
+          !validatedMails.some((validatedMail) => validatedMail.id === mail.id)
+      ),
+    [mailsArray, validatedMails]
+  );
 
   useGSAP(() => {
-    gsap.from('#gmail', {
+    gsap.from("#gmail", {
       translateY: 72,
       translateX: -32,
-      scale: '0',
+      scale: "0",
       // opacity: 0,
       duration: 0.4,
-      ease: 'power1.out',
+      ease: "power1.out",
     });
   });
+
+  const [numberOfStars, setNumberOfStars] = useState(null);
 
   const addValidation = useCallback((validation) => {
     setValidatedMails((oldValidations) => {
@@ -34,14 +44,15 @@ export const Gmail = () => {
       if (mailsArray.length == newValue.length) {
         const p = newValue.reduce((acc, v) => acc + v.points, 0);
         console.log(newValue, p);
+        setNumberOfStars((p / 2000) * 5);
       }
       return newValue;
     });
-    
   }, []);
 
   return (
-    <div id='gmail' className={styles.gmail}>
+    <div id="gmail" className={styles.gmail}>
+      {numberOfStars >= 2.5 && <Badges numberOfStars={numberOfStars}></Badges>}
       <header>
         <h1>Gmail {currentMailId && ` - ${mails[currentMailId].author}`}</h1>
       </header>
@@ -63,7 +74,7 @@ export const Gmail = () => {
             ))
           ) : (
             <div className={styles.emptyArray}>
-              <span className='material-symbols-outlined'>info</span>
+              <span className="material-symbols-outlined">info</span>
               <p>Aucun mail pour le moment</p>
             </div>
           )}
@@ -77,13 +88,13 @@ export const Gmail = () => {
           >
             <div
               dangerouslySetInnerHTML={{
-                __html: mails[currentMailId].body.replace(/\n/g, '<br />'),
+                __html: mails[currentMailId].body.replace(/\n/g, "<br />"),
               }}
             />
           </Mail>
         ) : (
           <div className={styles.emptyMail}>
-            <span className='material-symbols-outlined'>info</span>
+            <span className="material-symbols-outlined">info</span>
             <p>Aucun mail sélectionné</p>
           </div>
         )}
