@@ -11,13 +11,11 @@ import { useCallback } from 'react';
 export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
   const mailsArray = useMemo(() => Object.values(mails), []);
-
-  function hideCurrentMail() {
-    mailsArray.splice(currentMailId, 1);
-  }
-
+  
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
+
+  const unTreatedMails = useMemo(() => mailsArray.filter((mail) => !validatedMails.some((validatedMail) => validatedMail.id === mail.id)), [mailsArray,  validatedMails]);
 
   useGSAP(() => {
     gsap.from('#gmail', {
@@ -33,15 +31,9 @@ export const Gmail = () => {
   const addValidation = useCallback((validation) => {
     setValidatedMails((oldValidations) => {
       const newValue = [...oldValidations, validation];
-      if (mails.length == 0) {
-        let p = 0;
-        console.log(validatedMails);
-
-        validatedMails.forEach((e) => {
-          p += e.points;
-        });
-
-        console.log(points);
+      if (mailsArray.length == newValue.length) {
+        const p = newValue.reduce((acc, v) => acc + v.points, 0);
+        console.log(newValue, p);
       }
       return newValue;
     });
@@ -55,8 +47,8 @@ export const Gmail = () => {
       </header>
       <section>
         <div>
-          {mailsArray.length > 0 ? (
-            mailsArray.map((e) => (
+          {unTreatedMails.length > 0 ? (
+            unTreatedMails.map((e) => (
               <MailPreview
                 title={e.title}
                 author={e.author}
@@ -82,7 +74,6 @@ export const Gmail = () => {
             profilePicture={profilePicture}
             onValidate={addValidation}
             setCurrentMailId={setCurrentMailId}
-            hideCurrentMail={hideCurrentMail}
           >
             <div
               dangerouslySetInnerHTML={{
