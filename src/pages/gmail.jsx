@@ -12,6 +12,10 @@ export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
   const mailsArray = useMemo(() => Object.values(mails), []);
 
+  function deleteCurrentMail() {
+    mailsArray.splice(currentMailId, 1);
+  }
+
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
   // Faire quelque chose avec les validations quand tous les mails sont traités
@@ -57,6 +61,8 @@ export const Gmail = () => {
             mail={mails[currentMailId]}
             profilePicture={profilePicture}
             onValidate={addValidation}
+            setCurrentMailId={setCurrentMailId}
+            deleteCurrentMail={deleteCurrentMail}
           >
             <div
               dangerouslySetInnerHTML={{
