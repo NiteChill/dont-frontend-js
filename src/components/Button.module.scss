@@ -8,6 +8,7 @@
   border: solid 1px var(--outline);
   border-radius: 50px;
   cursor: pointer;
+  transition: filter .2s, background .2s;
   & > span {
     font-size: 1.125rem;
   }
@@ -16,10 +17,22 @@
     line-height: 1.1875rem;
     height: 1.1875rem;
   }
+  &:hover {
+    background-color: var(--surface-2);
+  }
+  &:active {
+    background-color: var(--surface-3);
+  }
   &.filled {
     border: none;
     background-color: var(--inverse-surface);
     color: var(--inverse-on-surface);
     font-weight: 600;
+    &:hover {
+      filter: contrast(0.6);
+    }
+    &:active {
+      filter: contrast(0.4);
+    }
   }
 }

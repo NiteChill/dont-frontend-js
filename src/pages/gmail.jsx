@@ -12,6 +12,10 @@ export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
   const mailsArray = useMemo(() => Object.values(mails), []);
 
+  function deleteCurrentMail() {
+    mailsArray.splice(currentMailId, 1);
+  }
+
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
   // Faire quelque chose avec les validations quand tous les mails sont traités
@@ -32,7 +36,7 @@ export const Gmail = () => {
   }, []);
 
   return (
-    <div id="gmail" className={styles.gmail}>
+    <div id='gmail' className={styles.gmail}>
       <header>
         <h1>Gmail</h1>
       </header>
@@ -45,8 +49,8 @@ export const Gmail = () => {
               date={e.date}
               active={e.id === currentMailId}
               key={e.id}
-              onClick={() => setCurrentMailId(e.id)} 
-              isDone={validatedMails.some(({ id }) => id === e.id )}
+              onClick={() => setCurrentMailId(e.id)}
+              isDone={validatedMails.some(({ id }) => id === e.id)}
             >
               {e.body}
             </MailPreview>
@@ -57,12 +61,14 @@ export const Gmail = () => {
             mail={mails[currentMailId]}
             profilePicture={profilePicture}
             onValidate={addValidation}
+            setCurrentMailId={setCurrentMailId}
+            deleteCurrentMail={deleteCurrentMail}
           >
             {mails[currentMailId].body}
           </Mail>
         ) : (
           <div className={styles.emptyMail}>
-            <span className="material-symbols-outlined">info</span>
+            <span className='material-symbols-outlined'>info</span>
             <p>Aucun mail sélectionné</p>
           </div>
         )}
