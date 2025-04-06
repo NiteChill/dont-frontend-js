@@ -18,7 +18,7 @@ export const Gmail = () => {
 
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
-  // Faire quelque chose avec les validations quand tous les mails sont traités
+  
 
   useGSAP(() => {
     gsap.from("#gmail", {
@@ -42,19 +42,26 @@ export const Gmail = () => {
       </header>
       <section>
         <div>
-          {mailsArray.map((e) => (
-            <MailPreview
-              title={e.title}
-              author={e.author}
-              date={e.date}
-              active={e.id === currentMailId}
-              key={e.id}
-              onClick={() => setCurrentMailId(e.id)}
-              isDone={validatedMails.some(({ id }) => id === e.id)}
-            >
-              {e.body}
-            </MailPreview>
-          ))}
+          {mailsArray.length > 0 ? (
+            mailsArray.map((e) => (
+              <MailPreview
+                title={e.title}
+                author={e.author}
+                date={e.date}
+                active={e.id === currentMailId}
+                key={e.id}
+                onClick={() => setCurrentMailId(e.id)}
+                isDone={validatedMails.some(({ id }) => id === e.id)}
+              >
+                {e.body}
+              </MailPreview>
+            ))
+          ) : (
+            <div className={styles.emptyArray}>
+              <span className='material-symbols-outlined'>info</span>
+              <p>Aucun mail pour le moment</p>
+            </div>
+          )}
         </div>
         {currentMailId != null ? (
           <Mail

@@ -13,7 +13,8 @@
     "author": "Concours Premium",
     "email": "contact@concourspremium.fr",
     "date": "6 avril 2025",
-    "body": "Bonne nouvelle !\n\nVous avez été sélectionné parmi nos gagnants pour recevoir un iPhone 15 tout neuf ! 📱\n\nPour valider votre gain, il vous suffit de confirmer votre adresse postale et de régler les frais d’expédition de 2,99€ :\n➡ Confirmer et recevoir mon iPhone : https://iphone-15-cadeau.fr\n\nAttention, vous n’avez que 48 heures pour réclamer votre prix !\n\nFélicitations encore,\nL’équipe Concours Premium"
+    "body": "Bonne nouvelle !\n\nVous avez été selectioné parmis nos gagnants pour recvoir un iPhone 15 tout neuf ! 📱\n\nPour valider votre gain, il suffit de confirmer votre adress postal et de régler les frais d’expédition de 2,99€ :\n➡ Confirmez et recevez mon iPhone : https://iphone-15-cadeau.fr\n\nAttention, vous n’avez que 48 heures pour reclamer votre prix !\n\nFélicitation encor,\nL’équipe Concours Premium",
+    "errors": ["urgency", "sensibleInformation", "mailAddress", "grammar"]
   },
   "mail-3": {
     "id": "mail-3",
@@ -29,7 +30,8 @@
     "author": "Amazon Commandes",
     "email": "confirmation@amazon-france.shop",
     "date": "6 avril 2025",
-    "body": "Bonjour,\n\nMerci pour votre commande.\n\nUn prélèvement de 499,99€ a été effectué pour l’achat d’un MacBook Air 13” - Commande n°837292.\n\n➡ Si vous n’êtes pas à l’origine de cette commande, annulez immédiatement en cliquant ici : https://amazon-verification-fr.shop\n\nPour toute autre information, veuillez contacter notre service client.\n\nMerci d’avoir choisi Amazon."
+    "body": "Bonjour,\n\nMerci pour votre commande.\n\nUn prélèvement de 499,99€ a été effectué pour l’achat d’un MacBook Air 13” - Commande n°837292.\n\n➡ Si vous n’êtes pas à l’origine de cette commande, annulez immédiatement en cliquant ici : https://amazon-verification-fr.shop\n\nPour toute autre information, veuillez contacter notre service client.\n\nMerci d’avoir choisi Amazon.",
+    "errors": ["urgency", "mailAddress", "sensibleInformation"]
   },
   "mail-5": {
     "id": "mail-5",
@@ -61,7 +63,8 @@
     "author": "Support Sécurité",
     "email": "securite@payezecur.fr",
     "date": "6 avril 2025",
-    "body": "Bonjour,\n\nNous avons détecté une activité suspecte sur votre compte PayeZécur.\n\nPour votre sécurité, nous avons temporairement limité l’accès à votre compte.\n\n➡ Veuillez vérifier votre identité immédiatement via ce lien sécurisé : https://payezecur-verif.com\n\n✅ Une fois l'identité confirmée, l’accès complet sera rétabli.\n\nSi vous ne confirmez pas dans les 24h, votre compte sera définitivement suspendu.\n\nMerci de votre vigilance,\nL’équipe Sécurité PayeZécur"
+    "body": "Bonjour,\n\nNous avons detectés une activité suspect sur votre compte PayeZécur.\n\nPour votre sécurité, nous avons temporairement limité l’accès a votre compte.\n\n➡ Veuillez verifier votre identité immédiatement via ce lien sécurisé : https://payezecur-verif.com\n\n✅ Une fois l'identité confirmer, l’accès sera rétablit.\n\nSi vous ne confirme pas dans les 24h, votre compte seras suspendu definitivement.\n\nMerci pour votre vigilence,\nL’équipe Sécurité PayeZécur",
+    "errors": ["urgency", "mailAddress", "sensibleInformation", "grammar"]
   },
   "mail-9": {
     "id": "mail-9",
@@ -69,7 +72,8 @@
     "author": "Service Client EDF",
     "email": "facture@edf-services.com",
     "date": "5 avril 2025",
-    "body": "Madame, Monsieur,\n\nVotre dernière facture n’a pas été réglée.\n\nUn prélèvement de 82,64€ est en attente.\n\nPour éviter une coupure de service, veuillez régulariser la situation dans les 24h :\n🔗 Régler ma facture maintenant : https://edf-paiement-fr.com\n\nEn cas de non-paiement, des frais supplémentaires pourraient s’appliquer.\n\nMerci de votre réactivité,\nL’équipe EDF\n(ce message est généré automatiquement, merci de ne pas y répondre)"
+    "body": "Madame, Monsieur,\n\nVotre dernière facture n’a pas été réglée.\n\nUn prélèvement de 82,64€ est en attente.\n\nPour éviter une coupure de service, veuillez régulariser la situation dans les 24h :\n🔗 Régler ma facture maintenant : https://edf-paiement-fr.com\n\nEn cas de non-paiement, des frais supplémentaires pourraient s’appliquer.\n\nMerci de votre réactivité,\nL’équipe EDF\n(ce message est généré automatiquement, merci de ne pas y répondre)",
+    "errors": ["urgency", "mailAddress", "sensibleInformation"]
   },
   "mail-10": {
     "id": "mail-10",

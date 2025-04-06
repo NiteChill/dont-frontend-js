@@ -36,11 +36,12 @@ export const Mail = ({
   const markAsRead = useCallback(() => {
     onValidate({ id: mail.id, points: !mail.errors?.length ? 100 : 0 });
     hideCurrentMail();
-    setCurrentMailId(null);
+    setCurrentMailId(null); 
   }, []);
 
   const reportMail = useCallback(
     (selectedErrorKeys) => {
+      
       if (!mail.errors?.length) {
         onValidate({ id: mail.id, points: 0 });
       }
