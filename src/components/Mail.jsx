@@ -20,7 +20,7 @@ export const Mail = ({
   onValidate,
   children,
   setCurrentMailId,
-  deleteCurrentMail,
+  hideCurrentMail,
 }) => {
   const [isReportOpen, setIsReportOpen] = useState(false);
   const { refs, floatingStyles, context } = useFloating({
@@ -35,7 +35,7 @@ export const Mail = ({
 
   const markAsRead = useCallback(() => {
     onValidate({ id: mail.id, points: !mail.errors?.length ? 100 : 0 });
-    deleteCurrentMail();
+    hideCurrentMail();
     setCurrentMailId(null);
   }, []);
 

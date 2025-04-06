@@ -12,7 +12,7 @@ export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
   const mailsArray = useMemo(() => Object.values(mails), []);
 
-  function deleteCurrentMail() {
+  function hideCurrentMail() {
     mailsArray.splice(currentMailId, 1);
   }
 
@@ -62,7 +62,7 @@ export const Gmail = () => {
             profilePicture={profilePicture}
             onValidate={addValidation}
             setCurrentMailId={setCurrentMailId}
-            deleteCurrentMail={deleteCurrentMail}
+            hideCurrentMail={hideCurrentMail}
           >
             <div
               dangerouslySetInnerHTML={{
