@@ -38,7 +38,7 @@ export const Gmail = () => {
   return (
     <div id='gmail' className={styles.gmail}>
       <header>
-        <h1>Gmail</h1>
+        <h1>Gmail {currentMailId && ` - ${mails[currentMailId].author}`}</h1>
       </header>
       <section>
         <div>

@@ -39,6 +39,12 @@
     font-size: 1rem;
     line-height: 1.1875rem;
     height: 1.1875rem;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
   }
   & > p {
     white-space: nowrap;

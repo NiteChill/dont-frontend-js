@@ -11,11 +11,11 @@
 }
 *::-webkit-scrollbar {
   width: 5px;
-  background-color: var(--surface-1);
+  background: color-mix(in srgb, var(--on-surface) 16%, transparent);
 }
 *::-webkit-scrollbar-thumb {
   width: 5px;
-  background-color: var(--surface-4);
+  background: color-mix(in srgb, var(--on-surface) 16%, transparent);
   border-radius: 8px;
   cursor: pointer;
 }
