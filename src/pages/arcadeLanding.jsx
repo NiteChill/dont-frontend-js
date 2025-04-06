@@ -58,7 +58,7 @@ export const ArcadeLanding = () => {
         '#rightLogo',
         {
           width: '423px',
-          duration: 2,
+          duration: 0.8,
           ease: 'circ',
         },
         '1'
