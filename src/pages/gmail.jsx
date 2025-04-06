@@ -64,7 +64,11 @@ export const Gmail = () => {
             setCurrentMailId={setCurrentMailId}
             deleteCurrentMail={deleteCurrentMail}
           >
-            {mails[currentMailId].body}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: mails[currentMailId].body.replace(/\n/g, '<br />'),
+              }}
+            />
           </Mail>
         ) : (
           <div className={styles.emptyMail}>
