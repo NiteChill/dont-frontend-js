@@ -1,0 +1,35 @@
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    gap: 10px;
+    background-color: var(--surface-4);
+    padding: 15px 30px 30px 30px;
+    border-radius: 18px;
+    color: var(--on-surface);
+
+    & > h2 {
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    & > label {
+        color: var(--on-surface-variant);
+        display: inline-flex;
+        flex-direction: row;
+        cursor: pointer;
+
+        & > input {
+            margin-right: 10px;
+        }
+
+        & > span {
+            margin-left: 10px;
+        }
+    }
+}
+
+.validateBtn {
+    margin-top: 10px;
+}

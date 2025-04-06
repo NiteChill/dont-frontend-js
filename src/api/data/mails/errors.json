@@ -1,0 +1,22 @@
+[
+    {
+        "key": "grammar",
+        "title": "Erreur(s) d'orthographe",
+        "explanation": "Les mails frauduleux comportent souvent des fautes d'orthographe, fautes de grammaire et syntaxe. Si vous en repérez, méfiez-vous de l'authenticité du mail reçu."
+    },
+    {
+        "key": "urgency",
+        "title": "Urgence exagérée ou menaces",
+        "explanation": "Les mails de phishing essaient souvent de te faire agir dans la panique : \"Votre compte sera supprimé dans 24h\" ou \"Une activité suspecte a été détectée, cliquez ici immédiatement\" par exemple"
+    },
+    {
+        "key": "mailAddress",
+        "title": "Adresse email suspecte",
+        "explanation": "Même si le nom affiché est \"Amazon\" ou \"La Poste\", vérifie l’adresse réelle. Par exemple \"amazon-service@support-12345.com\" est une adresse louche. Les vraies adresses finissent souvent par @amazon.fr, @laposte.fr, etc."
+    },
+    {
+        "key": "sensibleInformation",
+        "title": "Demande d'informations personnelles sensibles",
+        "explanation": "Un mail qui te demande ton mot de passe, numéro de carte bancaire, code de sécurité, etc., est très probablement frauduleux. Les entreprises sérieuses ne demandent jamais ça par mail."
+    }
+]

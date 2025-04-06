@@ -1,7 +1,9 @@
 import styles from './mailPreview.module.scss';
 import classNames from 'classnames';
 
-export const MailPreview = ({ children, title, author, date, onClick, active }) => {
+export const MailPreview = ({ children, title, author, date, onClick, active, isDone }) => {
+  // TODO: utiliser isDone pour mettre un petit bandeau (pour dire que c'est traité)
+  
   return (
     <div className={classNames(styles.mailPreview, {[styles.active]:active})} onClick={onClick}>
       <div>

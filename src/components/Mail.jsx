@@ -1,11 +1,58 @@
-import styles from "./Mail.module.scss"
-import Button from "./Button"
+import styles from "./Mail.module.scss";
+import Button from "./Button";
+import {
+  useFloating,
+  useInteractions,
+  useDismiss,
+  autoUpdate,
+  offset,
+  shift,
+  FloatingPortal
+} from "@floating-ui/react";
 
-export const Mail = ({author, title, profilePicture, date, mail, children}) => {
-    return(
+import { useState } from 'react';
+import { ErrorPopup } from "./errorPopup";
+import { useCallback } from "react";
+
+export const Mail = ({ mail, profilePicture, onValidate, children }) => {
+  const [isReportOpen, setIsReportOpen] = useState(false);
+  const { refs, floatingStyles, context } = useFloating({
+    open: isReportOpen,
+    onOpenChange: setIsReportOpen,
+    placement: "top",
+    whileElementsMounted: autoUpdate,
+    middleware: [ 
+      offset(20),
+      shift()
+    ]
+  });
+  const dismiss = useDismiss(context);
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    dismiss,
+  ]);
+
+  const markAsRead = useCallback(() => {
+    onValidate({ id: mail.id, points: !mail.errors?.length ? 100 : 0 });
+  }, []);
+
+  const reportMail = useCallback((selectedErrorKeys) => {
+    if (!mail.errors?.length) {
+      onValidate({ id: mail.id, points: 0 });
+    }
+
+    if (mail.errors) {
+      const includedErrors = selectedErrorKeys.filter((key) => mail.errors.includes(key));
+      const excludedErrors = selectedErrorKeys.filter((key) => !mail.errors.includes(key));
+      onValidate({ id: mail.id, points: includedErrors.length * 100 - excludedErrors.length * 20 });
+    }
+    setIsReportOpen(false);
+  }, [mail]);
+
+  return (
+      <>
         <article className={styles.mail}>
           <header>
-            <h2>{title}</h2>
+            <h2>{mail.title}</h2>
             <span className="material-symbols-outlined">star</span>
           </header>
           <main>
@@ -16,10 +63,10 @@ export const Mail = ({author, title, profilePicture, date, mail, children}) => {
             <div className={styles.content}>
               <header>
                 <div>
-                  <h3>{author}</h3>
-                  <p>{date}</p>
+                  <h3>{mail.author}</h3>
+                  <p>{mail.date}</p>
                 </div>
-                <p>{mail}</p>
+                <p>{mail.email}</p>
               </header>
               <div>
                 {children}
@@ -27,9 +74,18 @@ export const Mail = ({author, title, profilePicture, date, mail, children}) => {
             </div>
           </main>
           <footer>
-            <Button icon="check">Marquer comme lu</Button>
-            <Button filled icon="flag">Signaler</Button>
+            <Button icon="check" onClick={markAsRead}>Marquer comme lu</Button>
+            <Button ref={refs.setReference} {...getReferenceProps()} onClick={() => setIsReportOpen((v) => !v)} filled icon="flag">Signaler</Button>
           </footer>
         </article>
-    )
+        {
+          isReportOpen && 
+            (
+              <FloatingPortal>
+                <ErrorPopup ref={refs.setFloating} style={floatingStyles} {...getFloatingProps()} onSubmit={reportMail} />
+              </FloatingPortal>
+            )
+        }
+      </>
+  );
 }

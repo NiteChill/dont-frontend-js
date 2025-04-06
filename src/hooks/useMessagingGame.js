@@ -1,4 +1,4 @@
-import { getFlowchart } from '../api/getFlowchart';
+import { getFlowchart } from '../api/flowchart';
 import { useState, useMemo, useCallback, useRef } from 'react';
 import { isAnswer, findNextAdviceIdx } from '../helpers/nodes';
 import { useNotificationsSetter } from '../contexts/useNotifications';

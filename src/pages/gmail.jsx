@@ -4,13 +4,17 @@ import gsap from "gsap";
 import { MailPreview } from "../components/mailPreview";
 import profilePicture from "../assets/images/x-profiles/brigitte.png";
 import { Mail } from "../components/Mail";
-import { getMails } from "../api/getMails";
+import { getMails } from "../api/mails";
 import { useMemo, useState } from "react";
+import { useCallback } from "react";
 
 export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
+  const mailsArray = useMemo(() => Object.values(mails), []);
 
-  const [mail, setMail] = useState(null);
+  const [currentMailId, setCurrentMailId] = useState(null);
+  const [validatedMails, setValidatedMails] = useState([]);
+  // Faire quelque chose avec les validations quand tous les mails sont traités
 
   useGSAP(() => {
     gsap.from("#gmail", {
@@ -22,6 +26,11 @@ export const Gmail = () => {
       ease: "power1.out",
     });
   });
+
+  const addValidation = useCallback((validation) => {
+    setValidatedMails((oldValidations) => [...oldValidations, validation]);
+  }, []);
+
   return (
     <div id="gmail" className={styles.gmail}>
       <header>
@@ -29,28 +38,27 @@ export const Gmail = () => {
       </header>
       <section>
         <div>
-          {mails.map((e, id) => (
+          {mailsArray.map((e) => (
             <MailPreview
               title={e.title}
               author={e.author}
               date={e.date}
-              active={id === mail}
-              key={id}
-              onClick={() => setMail(id)}
+              active={e.id === currentMailId}
+              key={e.id}
+              onClick={() => setCurrentMailId(e.id)} 
+              isDone={validatedMails.some(({ id }) => id === e.id )}
             >
               {e.body}
             </MailPreview>
           ))}
         </div>
-        {mail != null ? (
+        {currentMailId != null ? (
           <Mail
-            title={mails[mail].title}
-            author={mails[mail].author}
-            date={mails[mail].date}
-            mail={mails[mail].mail}
+            mail={mails[currentMailId]}
             profilePicture={profilePicture}
+            onValidate={addValidation}
           >
-            {mails[mail].body}
+            {mails[currentMailId].body}
           </Mail>
         ) : (
           <div className={styles.emptyMail}>
