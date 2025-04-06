@@ -5,7 +5,10 @@
   width: 100%;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--outline-variant-2);
-  transition: background .2s ease;
+  transition: background .2s ease-in;
+  &:last-child {
+    border: none;
+  }
   &:hover {
     cursor: pointer;
     background-color: var(--surface-4);

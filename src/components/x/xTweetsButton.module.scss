@@ -2,10 +2,9 @@
   display: flex;
   flex-flow: row;
   align-items: center;
-  padding: 8px 18px 8px 18px;
+  padding: 0.5rem 0.75rem;
   gap: 8px;
-  font-size: 16px;
-  border-radius: 16px;
+  border-radius: 100rem;
   &:hover {
     cursor: pointer;
     background: var(--surface-1);
@@ -14,7 +13,20 @@
     cursor: pointer;
     background: var(--surface-2);
   }
-  & .buttonWithChildren{
+  & .buttonWithChildren {
     padding: 8px 24px 8px 18px;
+  }
+  & > div {
+    display: flex;
+    color: var(--on-surface);
+    & > span {
+      color: var(--on-surface-variant);
+      font-size: 1.125rem;
+    }
+  }
+  & > p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    height: 1.25rem;
   }
 }

@@ -35,6 +35,7 @@ export const Gmail = () => {
               author={e.author}
               date={e.date}
               active={id === mail}
+              key={id}
               onClick={() => setMail(id)}
             >
               {e.body}
@@ -43,10 +44,10 @@ export const Gmail = () => {
         </div>
         {mail != null ? (
           <Mail
-            title="[GitHub] Your password has changed"
-            author="GitHub"
-            date="5 Avril 2025, 6:45"
-            mail="noreply-maps-timeline@google.com"
+            title={mails[mail].title}
+            author={mails[mail].author}
+            date={mails[mail].date}
+            mail={mails[mail].mail}
             profilePicture={profilePicture}
           >
             {mails[mail].body}

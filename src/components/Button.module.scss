@@ -1,17 +1,25 @@
 .button {
-    display: flex;
-    padding: 12px 16px;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border: solid 1px var(--outline);
-    border-radius: 50px;
-    cursor: pointer;
-    &.filled {
-        border: none;
-        background-color: var(--inverse-surface);
-        color: var(--inverse-on-surface);
-        font-weight: 600;
-    }
+  display: flex;
+  padding: 12px 16px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: solid 1px var(--outline);
+  border-radius: 50px;
+  cursor: pointer;
+  & > span {
+    font-size: 1.125rem;
+  }
+  & > p {
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    height: 1.1875rem;
+  }
+  &.filled {
+    border: none;
+    background-color: var(--inverse-surface);
+    color: var(--inverse-on-surface);
+    font-weight: 600;
+  }
 }

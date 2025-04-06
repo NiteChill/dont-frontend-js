@@ -1,26 +1,33 @@
 .wrapper {
   display: flex;
-  gap: 16px;
-  padding: 32px 24px;
+  // gap: 16px;
+  padding: 2rem 1.5rem;
   position: relative;
-  
+  border-bottom: 1px solid var(--outline-variant-2);
+  &:last-child {
+    border: none;
+  }
   & .profilePicture {
-    border-radius: 16px;
-    width: 32px;
-    height: 32px;
+    border-radius: 1rem;
+    width: 2rem;
+    height: 2rem;
   }
   & .textWrapper {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 0.75rem;
+    & > img {
+      padding-left: 1rem;
+    }
     & .textWrapperContent {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 0.5rem;
+      padding-left: 1rem;
       & .topText {
         display: flex;
         flex-flow: row;
-        gap: 8px;
+        gap: 0.5rem;
         & .profileName {
           font-weight: 500;
         }

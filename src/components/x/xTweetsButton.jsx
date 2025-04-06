@@ -9,7 +9,7 @@ export const XTweetsButton = ({ icon, fillable, alt, children }) => {
       className={`${styles.button} ${children && styles.buttonWithChildren}`}
       onClick={() => setToggle(!toggle)}
     >
-      <div className="flex w-[18px] h-[18px]">
+      <div>
         <span className={`material-symbols-outlined ${(toggle && fillable) && "filled"}`}>{icon}</span>
       </div>
       {children && <p>{children}</p>}

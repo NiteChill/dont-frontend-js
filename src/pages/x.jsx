@@ -13,7 +13,7 @@ export const X = () => {
       translateY: 72,
       translateX: 32,
       scale: "0",
-      duration: 0.3,
+      duration: 0.4,
       ease: "power1.out",
     });
   });
