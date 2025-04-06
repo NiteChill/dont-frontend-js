@@ -55,7 +55,7 @@ export const Mail = ({
         const points = includedErrors.length * 100 - excludedErrors.length * 20;
         onValidate({ id: mail.id, points: Math.max(0, points) });
       }
-      deleteCurrentMail();
+      hideCurrentMail();
       setIsReportOpen(false);
       setCurrentMailId(null);
     },
