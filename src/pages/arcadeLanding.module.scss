@@ -1,4 +1,5 @@
 .arcadeLanding {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +11,38 @@
       rgba(0, 0, 0, 0.2) 58.99%
     ),
     #151515;
-  & > div {
+  
+  :global {
+    .aws-btn {
+      --button-default-height: 300px;
+      --button-default-font-size: 25px;
+      --button-default-border-radius: 25px;
+      --button-horizontal-padding: 50px;
+      --button-raise-level: 20px;
+      --button-hover-pressure: 2.5;
+      --transform-speed: .175s;
+      --button-primary-color: #830000;
+      --button-primary-color-dark: #570000;
+      --button-primary-color-light: #ffffff;
+      --button-primary-color-hover: #830000;
+      --button-primary-color-active: #830000;
+      --button-primary-border: 0px solid #FFFFFF;
+      --button-secondary-color: #f2f6f9;
+      --button-secondary-color-dark: #830000;
+      --button-secondary-color-light: #830000;
+      --button-secondary-color-active: #830000;
+      --button-secondary-color-hover: #e1eaf1;
+      --button-secondary-border: 0px solid #830000;
+      --button-anchor-color: #830000;
+      --button-anchor-color-dark: #830000;
+      --button-anchor-color-light: #ffffff;
+      --button-anchor-color-hover: #830000;
+      --button-anchor-border: none;
+      width: 80%;
+    }
+  }
+
+  .logoContainer {
     display: flex;
     height: 5rem;
     & > div {
