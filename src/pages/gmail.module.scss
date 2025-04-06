@@ -41,6 +41,11 @@
       width: 28.75rem;
       background: var(--surface-1);
       border-right: 1px solid var(--outline-variant);
+      & .emptyArray{
+        display: flex;
+        padding: 24px 32px;
+        gap: 12px;
+      }
     }
     & > article {
       display: flex;

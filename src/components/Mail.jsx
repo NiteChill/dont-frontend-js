@@ -20,7 +20,6 @@ export const Mail = ({
   onValidate,
   children,
   setCurrentMailId,
-  hideCurrentMail,
 }) => {
   const [isReportOpen, setIsReportOpen] = useState(false);
   const { refs, floatingStyles, context } = useFloating({
@@ -35,12 +34,12 @@ export const Mail = ({
 
   const markAsRead = useCallback(() => {
     onValidate({ id: mail.id, points: !mail.errors?.length ? 100 : 0 });
-    hideCurrentMail();
-    setCurrentMailId(null);
+    setCurrentMailId(null); 
   }, []);
 
   const reportMail = useCallback(
     (selectedErrorKeys) => {
+      
       if (!mail.errors?.length) {
         onValidate({ id: mail.id, points: 0 });
       }
@@ -55,7 +54,6 @@ export const Mail = ({
         const points = includedErrors.length * 100 - excludedErrors.length * 20;
         onValidate({ id: mail.id, points: Math.max(0, points) });
       }
-      deleteCurrentMail();
       setIsReportOpen(false);
       setCurrentMailId(null);
     },
