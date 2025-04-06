@@ -1,38 +1,43 @@
-import { useGSAP } from "@gsap/react";
-import styles from "./gmail.module.scss";
-import gsap from "gsap";
-import { MailPreview } from "../components/mailPreview";
-import profilePicture from "../assets/images/x-profiles/brigitte.png";
-import { Mail } from "../components/Mail";
-import { getMails } from "../api/mails";
-import { useMemo, useState } from "react";
-import { useCallback } from "react";
+import { useGSAP } from '@gsap/react';
+import styles from './gmail.module.scss';
+import gsap from 'gsap';
+import { MailPreview } from '../components/mailPreview';
+import profilePicture from '../assets/images/x-profiles/brigitte.png';
+import { Mail } from '../components/Mail';
+import { getMails } from '../api/mails';
+import { useEffect, useMemo, useState } from 'react';
+import { useCallback } from 'react';
 
 export const Gmail = () => {
   const mails = useMemo(() => getMails(), []);
   const mailsArray = useMemo(() => Object.values(mails), []);
-
-  function deleteCurrentMail() {
-    mailsArray.splice(currentMailId, 1);
-  }
-
+  
   const [currentMailId, setCurrentMailId] = useState(null);
   const [validatedMails, setValidatedMails] = useState([]);
-  // Faire quelque chose avec les validations quand tous les mails sont traités
+
+  const unTreatedMails = useMemo(() => mailsArray.filter((mail) => !validatedMails.some((validatedMail) => validatedMail.id === mail.id)), [mailsArray,  validatedMails]);
 
   useGSAP(() => {
-    gsap.from("#gmail", {
+    gsap.from('#gmail', {
       translateY: 72,
       translateX: -32,
-      scale: "0",
+      scale: '0',
       // opacity: 0,
       duration: 0.4,
-      ease: "power1.out",
+      ease: 'power1.out',
     });
   });
 
   const addValidation = useCallback((validation) => {
-    setValidatedMails((oldValidations) => [...oldValidations, validation]);
+    setValidatedMails((oldValidations) => {
+      const newValue = [...oldValidations, validation];
+      if (mailsArray.length == newValue.length) {
+        const p = newValue.reduce((acc, v) => acc + v.points, 0);
+        console.log(newValue, p);
+      }
+      return newValue;
+    });
+    
   }, []);
 
   return (
@@ -42,19 +47,26 @@ export const Gmail = () => {
       </header>
       <section>
         <div>
-          {mailsArray.map((e) => (
-            <MailPreview
-              title={e.title}
-              author={e.author}
-              date={e.date}
-              active={e.id === currentMailId}
-              key={e.id}
-              onClick={() => setCurrentMailId(e.id)}
-              isDone={validatedMails.some(({ id }) => id === e.id)}
-            >
-              {e.body}
-            </MailPreview>
-          ))}
+          {unTreatedMails.length > 0 ? (
+            unTreatedMails.map((e) => (
+              <MailPreview
+                title={e.title}
+                author={e.author}
+                date={e.date}
+                active={e.id === currentMailId}
+                key={e.id}
+                onClick={() => setCurrentMailId(e.id)}
+                isDone={validatedMails.some(({ id }) => id === e.id)}
+              >
+                {e.body}
+              </MailPreview>
+            ))
+          ) : (
+            <div className={styles.emptyArray}>
+              <span className='material-symbols-outlined'>info</span>
+              <p>Aucun mail pour le moment</p>
+            </div>
+          )}
         </div>
         {currentMailId != null ? (
           <Mail
@@ -62,7 +74,6 @@ export const Gmail = () => {
             profilePicture={profilePicture}
             onValidate={addValidation}
             setCurrentMailId={setCurrentMailId}
-            deleteCurrentMail={deleteCurrentMail}
           >
             <div
               dangerouslySetInnerHTML={{
