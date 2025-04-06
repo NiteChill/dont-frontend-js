@@ -43,7 +43,8 @@ export const Mail = ({ mail, profilePicture, onValidate, children }) => {
     if (mail.errors) {
       const includedErrors = selectedErrorKeys.filter((key) => mail.errors.includes(key));
       const excludedErrors = selectedErrorKeys.filter((key) => !mail.errors.includes(key));
-      onValidate({ id: mail.id, points: includedErrors.length * 100 - excludedErrors.length * 20 });
+      const points = includedErrors.length * 100 - excludedErrors.length * 20;
+      onValidate({ id: mail.id, points: Math.max(0, points) });
     }
     setIsReportOpen(false);
   }, [mail]);
