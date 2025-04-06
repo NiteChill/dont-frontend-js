@@ -6,6 +6,9 @@
 }
 
 .wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,4 +17,5 @@
     background-color: var(--surface-4);
     gap: 6px;
     border-radius: 100rem;
+    transform-origin: left bottom;
 }

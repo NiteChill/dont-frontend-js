@@ -8,6 +8,7 @@
   max-width: 480px;
   border-radius: 32px;
   padding: 16px 24px;
+  transform-origin: left bottom;
   background-color: var(--surface-4);
 }
 
@@ -28,6 +29,7 @@
   background-color: var(--primary);
   color: var(--on-primary);
   align-self: flex-end;
+  transform-origin: right bottom;
 }
 
 .advice {

@@ -22,10 +22,9 @@ export const SentMessage = forwardRef(
     useGSAP(() => {
       const isAnswerNode = isAnswer(nodeId);
       const animation = gsap.from(`#node-${nodeId}`, {
-        translateY: 72,
-        translateX: isAnswerNode ? 96 : -96,
+        // translateY: 72,
+        // translateX: isAnswerNode ? 96 : -96,
         scale: '0',
-        height: '0',
         duration: 0.3,
         ease: 'power1.out',
       });
@@ -63,12 +62,14 @@ export const SentMessage = forwardRef(
           ) : (
             <>
               <span className={styles.avatar}></span>
-              <Dots id={`dots-${nodeId}`} />
-              <div
-                id={!isAnswerNode ? `node-${nodeId}` : undefined}
-                className={styles.receivedMessage}
-              >
-                {node.message}
+              <div style={{ position: 'relative' }}>
+                <div
+                  id={!isAnswerNode ? `node-${nodeId}` : undefined}
+                  className={styles.receivedMessage}
+                >
+                  {node.message}
+                </div>
+                <Dots id={`dots-${nodeId}`} />
               </div>
             </>
           )}
