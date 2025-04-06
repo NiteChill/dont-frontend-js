@@ -32,7 +32,7 @@ export const Gmail = () => {
   }, []);
 
   return (
-    <div id="gmail" className={styles.gmail}>
+    <div id='gmail' className={styles.gmail}>
       <header>
         <h1>Gmail</h1>
       </header>
@@ -45,8 +45,8 @@ export const Gmail = () => {
               date={e.date}
               active={e.id === currentMailId}
               key={e.id}
-              onClick={() => setCurrentMailId(e.id)} 
-              isDone={validatedMails.some(({ id }) => id === e.id )}
+              onClick={() => setCurrentMailId(e.id)}
+              isDone={validatedMails.some(({ id }) => id === e.id)}
             >
               {e.body}
             </MailPreview>
@@ -58,11 +58,15 @@ export const Gmail = () => {
             profilePicture={profilePicture}
             onValidate={addValidation}
           >
-            {mails[currentMailId].body}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: mails[currentMailId].body.replace(/\n/g, '<br />'),
+              }}
+            />
           </Mail>
         ) : (
           <div className={styles.emptyMail}>
-            <span className="material-symbols-outlined">info</span>
+            <span className='material-symbols-outlined'>info</span>
             <p>Aucun mail sélectionné</p>
           </div>
         )}
