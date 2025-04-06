@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@dolaanpls/react-awesome-button':
+        specifier: ^8.0.0
+        version: 8.0.0
       '@floating-ui/react':
         specifier: ^0.27.6
         version: 0.27.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -160,6 +163,9 @@ packages:
   '@babel/types@7.27.0':
     resolution: {integrity: sha512-H45s8fVLYjbhFH62dIJ3WtmJ6RSPt/3DRO0ZcT2SUiYiQyz3BLVb9ADEnLl91m74aQPS3AzzeajZHYOalWe3bg==}
     engines: {node: '>=6.9.0'}
+
+  '@dolaanpls/react-awesome-button@8.0.0':
+    resolution: {integrity: sha512-NqOJDNqWjyP9h2m1wNHq4cMu4HJkzAv7YQrZjO5gQJS7UQAG/2TNwhRROYxJCkuc47VnyzuhEB3BEIsPbP6DuA==}
 
   '@esbuild/aix-ppc64@0.25.2':
     resolution: {integrity: sha512-wCIboOL2yXZym2cgm6mlA742s9QeJ8DjGVaL39dLN4rRwrOgOyYSnOaFPhKZGLb2ngj4EyfAFjsNJwPXZvseag==}
@@ -499,6 +505,9 @@ packages:
   '@parcel/watcher@2.5.1':
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
+
+  '@rcaferati/wac@1.0.0':
+    resolution: {integrity: sha512-7dVbzvcfL9o4UnrCaNeoIs7Ri9Ol+OMfpYYCJJV1dfm+5+pVM6DrvFjPzqifd2ACVABpXmwTQKy9KFxNm/7IdA==}
 
   '@rollup/rollup-android-arm-eabi@4.39.0':
     resolution: {integrity: sha512-lGVys55Qb00Wvh8DMAocp5kIcaNzEFTmGhfFd88LfaogYTRKrdxgtlO5H6S49v2Nd8R2C6wLOal0qv6/kCkOwA==}
@@ -1477,6 +1486,10 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@dolaanpls/react-awesome-button@8.0.0':
+    dependencies:
+      '@rcaferati/wac': 1.0.0
+
   '@esbuild/aix-ppc64@0.25.2':
     optional: true
 
@@ -1720,6 +1733,8 @@ snapshots:
       '@parcel/watcher-win32-ia32': 2.5.1
       '@parcel/watcher-win32-x64': 2.5.1
     optional: true
+
+  '@rcaferati/wac@1.0.0': {}
 
   '@rollup/rollup-android-arm-eabi@4.39.0':
     optional: true
