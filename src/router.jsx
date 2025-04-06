@@ -5,7 +5,7 @@ import { Messages } from './pages/messages';
 import { Gmail } from './pages/gmail';
 import { X } from './pages/x';
 import { Tinder } from './pages/Tinder';
-import { Layout } from './components/layout';
+import { Layout } from './components/Layout';
 import { ArcadeLanding } from './pages/arcadeLanding';
 import { GameKeys } from './constants/games';
 
