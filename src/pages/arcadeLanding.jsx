@@ -6,9 +6,28 @@ import { AwesomeButton } from '@dolaanpls/react-awesome-button';
 import '@dolaanpls/react-awesome-button/dist/styles.css';
 import { useNavigate } from 'react-router-dom';
 import { GameKeys } from '../constants/games';
+import { useState } from 'react';
+import { useRef } from 'react';
 
 export const ArcadeLanding = () => {
-  const navigate = useNavigate();
+  const [isComplete, setIsComplete] = useState(false),
+  container = useRef(),
+  { contextSafe } = useGSAP({scope: container}),
+  navigate = useNavigate(),
+  handleHover = contextSafe((inside) => {
+    gsap.to('#leftLogo', {
+      width: inside ? '270px' : '185px',
+      ease: 'power1.inOut',
+      duration: 0.6,
+      delay: inside ? 0 : 0.3,
+    })
+    gsap.to('#rightLogo', {
+      width: inside ? '423px' : '335px',
+      ease: 'power1.inOut',
+      duration: 0.6,
+      delay: inside ? 0 : 0.3,
+    })
+  })
 
   useGSAP(() => {
     gsap.set('#leftLogo', {
@@ -23,13 +42,15 @@ export const ArcadeLanding = () => {
           ease: 'power1.inOut',
           delay: 0,
         },
+        onComplete: () => setIsComplete(true)
       })
       .add('1')
       .to(
         '#leftLogo',
         {
           width: '270px',
-          duration: 2,
+          duration: 0.8,
+          ease: 'circ',
         },
         '1'
       )
@@ -38,13 +59,21 @@ export const ArcadeLanding = () => {
         {
           width: '423px',
           duration: 2,
+          ease: 'circ',
         },
         '1'
-      );
+      ).add('2').to('#leftLogo', {
+        width: '185px',
+        duration: 0.5
+      }, '2').to('#rightLogo', {
+        width: '335px',
+        duration: 0.5
+      }, '2')
   });
   return (
-    <div className={styles.arcadeLanding}>
-      <AwesomeButton onMouseUp={() => setTimeout(() => navigate(`/${GameKeys.Chat}`), 250)}>
+    <div className={styles.arcadeLanding} ref={container}>
+      <div style={{display: 'contents'}} onMouseEnter={() => isComplete && handleHover(true)} onMouseLeave={() => isComplete && handleHover(false)}>
+      <AwesomeButton onMouseUp={() => setTimeout(() => navigate(`/${GameKeys.Chat}`), 250)} on>
         <div
           className={styles.logoContainer}
         >
@@ -86,7 +115,7 @@ export const ArcadeLanding = () => {
           </div>
         </div>
       </AwesomeButton>
-      
+      </div>
     </div>
   );
 };
